@@ -1,0 +1,63 @@
+#logogrande {
+    max-width: 200px;
+    position: absolute;
+    z-index: 1000;
+    transition: 300ms all ease-in-out;
+}
+
+.navbar-brand {
+    margin-top: -25px!important;
+    padding-top: 0!important;
+}
+
+.droplista {
+    margin-left: 0!important;
+}
+
+nav {
+    font-size: 22px;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+ :focus {
+    outline: none;
+}
+
+.menumobile {
+    margin-left: -80px;
+}
+
+.menumobile ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menumobile ul li {
+    font-weight: bold;
+}
+
+.menumobile ul li ul li {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+.menumobile ul li ul li span {
+    background-image: url(/assets/images/isologo.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+@media screen and (max-width:992px) {
+    #logogrande {
+        max-width: 80px;
+        position: absolute;
+        z-index: 1000;
+        top: 15px;
+        left: 15px;
+    }
+}

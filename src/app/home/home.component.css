@@ -1,0 +1,16 @@
+.conthome {
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0, 2, 103, 0.78) -50%, rgba(61, 1, 1, 0.9) 100%);
+}
+
+.backgral {
+    background-image: url(/assets/images/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100% - 56px);
+    min-height: calc(100% - 65px);
+    min-width: 100%!important;
+    position: absolute;
+}

@@ -1,0 +1,101 @@
+    #iconos img {
+        max-width: 80px;
+    }
+    
+    #iconos div {
+        box-sizing: content-box;
+        display: inline-block;
+    }
+    
+    .fuente {
+        font-family: "bitter";
+    }
+    
+    .slide {
+        min-height: 620px;
+    }
+    
+    #textosl1 h1,
+    #textosl2 h1 {
+        font-family: 'Bitter', serif;
+        font-size: 105px;
+        color: #FFF;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    #textosl3 h1 {
+        font-family: 'Bitter', serif;
+        font-size: 80px;
+        color: #FFF;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    #textosl1 h2,
+    #textosl2 h2,
+    #textosl3 h2 {
+        font-family: 'Bitter', serif;
+        color: #D70A0A;
+        font-size: 51px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+        font-weight: bold;
+    }
+    
+     :focus {
+        outline: none!important;
+    }
+    
+    @media screen and (max-width:992px) {
+        #textosl1 h1,
+        #textosl2 h1,
+        #textosl3 h1 {
+            font-size: 50px;
+        }
+        #iconos img {
+            max-width: 60px;
+        }
+        #iconos div {
+            margin: 5px 10px;
+        }
+        #producto3 img {
+            max-height: 300px;
+            margin-top: 0px;
+            margin-left: 60px!important;
+        }
+        #textosl1 h2,
+        #textosl2 h2,
+        #textosl3 h2 {
+            font-size: 35px;
+        }
+        #producto2 img {
+            max-height: 420px;
+            margin-top: 0px;
+            margin-left: -90px!important;
+        }
+    }
+    
+    @media screen and (min-width:993px) {
+        #producto2 img {
+            max-height: 400px;
+            margin-top: -170px;
+            margin-right: 150px!important;
+            float: right;
+        }
+        #textosl3 h1 {
+            font-size: 80px;
+        }
+        #iconos img {
+            max-width: 80px;
+        }
+        #iconos div {
+            margin: 0px;
+        }
+        #producto3 img {
+            max-height: 400px;
+            margin-top: -146px;
+            margin-left: 121px!important;
+        }
+    }
