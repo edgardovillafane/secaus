@@ -14,11 +14,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { GraciasComponent } from './gracias/gracias.component';
 import { ConsultaporobraComponent } from './consultaporobra/consultaporobra.component';
-
+import { BackendContentComponent } from './backend-content/backend-content.component';
+import { ContentService } from './content.service';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule }    from '@angular/common/http';
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'contenido',
+    component: BackendContentComponent,
   },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
@@ -60,7 +67,8 @@ const routes: Routes = [
     ColocacionplacasComponent,
     NavigationComponent,
     GraciasComponent,
-    ConsultaporobraComponent
+    ConsultaporobraComponent,
+    BackendContentComponent
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -68,12 +76,13 @@ const routes: Routes = [
     BrowserModule,
     NgbModule.forRoot(),
     [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
-
+    HttpModule,
+    HttpClientModule,
   ],
   exports: [
     [RouterModule]
   ],
-  providers: [Http],
+  providers: [ContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
