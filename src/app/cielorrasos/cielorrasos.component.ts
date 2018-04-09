@@ -10,7 +10,7 @@ export class CielorrasosComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this._nombre = this.route.snapshot.params['nombre'];
+    this._nombre = this.route.snapshot.params['nombre'].replace(/-/g, ' ');
   }
 
 }

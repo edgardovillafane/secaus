@@ -13,7 +13,8 @@ export class RevestimientosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._nombre = this.route.snapshot.params['nombre'];
+    this._nombre = this.route.snapshot.params['nombre'].replace(/-/g, ' ');
+    ;
   }
 
 }
