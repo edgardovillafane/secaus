@@ -18,14 +18,29 @@ import { BackendContentComponent } from './backend-content/backend-content.compo
 import { ContentService } from './content.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule }    from '@angular/common/http';
+import { UsosComponent } from './usos/usos.component';
+import { ItemUsosComponent } from './item-usos/item-usos.component';
+import { BackendNavbarComponent } from './backend-navbar/backend-navbar.component';
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
   },
   {
-    path: 'contenido',
+    path: 'admin',
+    component: BackendNavbarComponent,
+  },
+  {
+    path: 'admin/contenido',
     component: BackendContentComponent,
+  },
+  {
+    path: 'usos',
+    component: UsosComponent,
+  },
+  {
+    path: 'usos/:nombre',
+    component: ItemUsosComponent,
   },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
@@ -68,7 +83,10 @@ const routes: Routes = [
     NavigationComponent,
     GraciasComponent,
     ConsultaporobraComponent,
-    BackendContentComponent
+    BackendContentComponent,
+    UsosComponent,
+    ItemUsosComponent,
+    BackendNavbarComponent
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

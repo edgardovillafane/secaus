@@ -47,7 +47,6 @@ export class BackendContentComponent implements OnInit {
 
   ngOnInit() {
     this.ListContent();
-   
   }
 
 
@@ -152,16 +151,16 @@ export class BackendContentComponent implements OnInit {
     }
     /** Here is where we delete the checkbox (ID of user) */
     DeleteReg(){
-      // for(this.i=0; this.i<this.NumberAux; this.i++){
-      //   if(this.CheckAcumulador[this.i] == undefined){
-      //     console.log("Indefinido");
-      //   }else{
-      //     this.contentService.CrudFunction(2, this.CheckAcumulador[this.i],"","","","")
-      //     .subscribe((data) => { 
-      //       this.Aux = data;
-      //     });
-      //   }
-      // }
+      for(this.i=0; this.i<this.NumberAux; this.i++){
+        if(this.CheckAcumulador[this.i] == undefined){
+          console.log("Indefinido");
+        }else{
+          this.contentService.CrudFunction(2, this.CheckAcumulador[this.i],"","","","")
+          .subscribe((data) => { 
+            this.Aux = data;
+          });
+        }
+      }
       location.reload();
     }
 /** Here we are validating the store form and creating the alert message */
@@ -193,16 +192,16 @@ export class BackendContentComponent implements OnInit {
     }
 
     /** This function is storing the new regist in a database */
-    Sntore(){
-
-      // if(this.ValidateForm()){
-      // this.formElement = document.getElementById("Formulario");
-      // this.request = new XMLHttpRequest();
-      // this.request.open("POST", "php/script/store-content.php");
-      // console.log(this.request.send(new FormData(this.formElement)));
-      // this.ListContent();
-      // location.reload();
-      // }
+    Store(){
+      if(this.ValidateForm()){
+      this.formElement = document.getElementById("Formulario");
+      this.request = new XMLHttpRequest();
+      this.request.open("POST", "php/script/store-content.php");
+      console.log(this.request.send(new FormData(this.formElement)));
+      this.ListContent();
+    //   location.reload();
+    //  console.log("hola");
+    }
     }
 
 }

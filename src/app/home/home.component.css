@@ -6,7 +6,6 @@
 }
 
 .backgral {
-    background-image: url(/assets/images/fondo.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: calc(100% - 56px);

@@ -1,8 +1,8 @@
 <?php
-require_once '../class/abacor.php';
+require_once '../class/seca.php';
 require_once '../class/connect.php';
 
-$NewConnect = new Abacor();
+$NewConnect = new Seca();
 	
 	$Titulo = $_POST["titulo"];
 	$Subtitulo = $_POST["subtitulo"];

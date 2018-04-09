@@ -1,9 +1,9 @@
 <?php
 
-	include '../class/abacor.php';
+	include '../class/seca.php';
 	include '../class/connect.php';
 
-	$NewConnect = new Abacor();
+	$NewConnect = new Seca();
 	
 	if($_GET["data"]==1){
 		$sql="SELECT * FROM usuarios WHERE u_status = 1";	

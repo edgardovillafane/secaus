@@ -1,18 +1,6 @@
-<!-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-<script>
-$(document).ready(function(){
-  tinymce.init({ selector:'textarea' });
-});
-</script>
-<app-nav-backend></app-nav-backend> -->
 <section class="pt-5 pb-5 my-5">
   <div class="container mt-5">
-    <div class="row text-center">
-      <div class="offset-6 col-6">
-      
-        </div>
-      
-    </div>
+   
     <ng-template #other_content>
        
 
@@ -56,15 +44,11 @@ $(document).ready(function(){
         <div class="col-6">
           <label>Parrafo</label>
         </div>
-        <div class="col-6">
-
-          <textarea id="descripcion" value="" placeholder="Texto descriptivo." name="parrafo" class="mt-2 form-control" required><editor apiKey="YOUR_API_KEY" cloudChannel="dev" [init]="{ selector: 'textarea' }"></editor>
-          </textarea>
-          <!-- <editor type="text" value="" id="descripcion" name="parrafo" apiKey="YOUR_API_KEY" cloudChannel="dev" [init]="{ selector: 'textarea' }" required></editor> -->
-
+        <div class="col-6">         
+          <textarea placeholder="Describa su producto" name="parrafo" id="descripcion" class="mt-2 form-control"></textarea>
           <div *ngIf="BooleanToAlertParrafo" class="alert alert-danger">
               <div>
-                * Debe ingresar un parrafo.
+                * Debe ingresar un texto que describa su producto.
               </div>
             </div>
         </div>
@@ -136,7 +120,7 @@ $(document).ready(function(){
               <textarea id="parrafo-ed" value="{{ListEdit.u_parrafo}}" placeholder="Descripcion" class="mt-2 form-control"></textarea>
               <div *ngIf="BooleanToAlertParrafo" class="alert alert-danger">
                   <div>
-                    * Debe ingresar una descripcion.
+                    * Debe ingresar un texto que describa su producto.
                   </div>
               </div>
             </div>
@@ -154,7 +138,8 @@ $(document).ready(function(){
          </div>
     </ng-template>
     </ng-template>
-    <div *ngIf="BooleanTable;else other_content" class="mt-3">
+    <div *ngIf="BooleanTable;else other_content" class="mt-1">
+      
     <div class="row">
       <div class="col-5">
         <h2>Tabla de usos.</h2>
@@ -164,6 +149,7 @@ $(document).ready(function(){
         <button class="btn btn-md btn-danger pull-right" (click)="DeleteReg()">Eliminar</button>
       </div>  
     </div>   
+    <div style="overflow-x:auto;">
             <table class="table table-bordered mt-3"  width="100%">
             <thead>
               <tr>
@@ -190,6 +176,7 @@ $(document).ready(function(){
               </tr>
             </tbody>
           </table>
+        </div>
     </div>
   </div> 
 </section>
