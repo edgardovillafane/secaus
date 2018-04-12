@@ -1,11 +1,13 @@
 <?php 
+//main class
 class Seca{
 	public function ExecuteSql($sql){
 		$conex = New Connect();
 		$conex -> CreateConnection();
 		$conex -> Execute($sql);
 		$conex -> CloseConnection();
-	}	  
+	}	
+	//connection with de DB - Create JSON Output  
 	public function CreateJson($sql){
 		$con = New Connect();
 		$con -> CreateConnection();
@@ -19,6 +21,7 @@ class Seca{
 		echo json_encode($ArrayJson);
 		$con -> CloseConnection();		
 	}
+	//delete method 
 	public function Borrar($sql){
 			$con = new Connect();
 			$con->CreateConnection();

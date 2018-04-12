@@ -1,4 +1,10 @@
 <?php 
+/*
+
+Edgardo Villafane 4/12/18
+Conection classes
+
+*/
 class Connect{
 	
 	private $host;
@@ -17,12 +23,15 @@ class Connect{
 	$this->database=DATABASE;
 	   
 	}
+	//create connection 
 	public function CreateConnection(){
 		$this->conn = new mysqli($this->host, $this->user, $this->password, $this->database);
-	}	  
+	}
+	//Close connection	  
 	public function CloseConnection(){
 		$this->conn->close();
 	}
+	//Execute connection
 	public function Execute($sql){
 		$result = $this->conn->query($sql);
 		return $result;
